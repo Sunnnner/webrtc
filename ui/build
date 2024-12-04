@@ -1,0 +1,11 @@
+#! /bin/bash
+
+set -e
+
+pnpm install
+
+rm -rf dist
+
+pnpm build
+
+docker build -t webrtcui .

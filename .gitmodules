@@ -1,0 +1,6 @@
+[submodule "signaling"]
+	path = signaling
+	url = https://github.com/Sunnnner/signaling.git
+[submodule "ui"]
+	path = ui
+	url = https://github.com/Sunnnner/ui.git

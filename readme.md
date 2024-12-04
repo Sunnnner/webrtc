@@ -1,0 +1,6 @@
+- `ui.conf` 前端nginx配置文件
+- `my.conf` coturn配置文件使用docker运行 `docker run --name coturn -p 3478:3478/tcp -p 3478:3478/udp -p 5349:5349/tcp -p 5349:5349/udp -d --network=host -v $(pwd)/my.conf:/etc/coturn/turnserver.conf coturn/coturn:edge-alpine`
+    - 配置文件中`listening-ip`需要配置为0.0.0.0
+    - 配置文件中使用静态用户`user=test:test`如果需要动态用户请链接数据库使用
+    - realm需要配置为coturn服务器公网IP或者域名
+- docker-compose中环境变量在对应的项目有详细说明
